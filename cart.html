@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>購物車</title>
+    <style>
+        .container{
+            background-color: #a3bf7e;
+            width:50%;
+            margin:auto;
+            padding:30px;
+        }
+        th{
+            background-color:#b2d4a8;
+        }
+        table{
+            border-collapse: separate;
+            width: 100%;
+            border-spacing: 0;
+        }
+        th, td{
+            border:solid white 1px;
+        }
+        th:first-child{
+            border-top-left-radius: 5px;
+        }
+        th:last-child{
+            border-top-right-radius: 5px;
+        }
+        td:first-child{
+            border-bottom-left-radius: 5px;
+        }
+        td:last-child{
+            border-bottom-right-radius: 5px;
+        }
+
+        td{
+            background-color:white;
+            text-align: center;
+        }
+        .add{
+            display:inline-block;
+            background-color: #b2d4a8;
+            width:20px;
+            color: white;
+            text-align: center;
+        }
+        .minus{
+            display:inline-block;
+            background-color: #b2d4a8;
+            width:20px;
+            color: white;
+            text-align: center;
+        }
+        .skills{
+            display: flex;
+        }
+        .submit{
+            background-color:#256753;
+            color: white;
+        }
+        .button{
+            text-align: center;
+        }
+        button{
+            margin-top: 10px;
+            border-radius: 2px;
+            border:none;
+        }
+        a{
+            text-decoration: none;
+        }
+        a:hover{
+            background-color:#48816b;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>購物車</h1>
+        <table>
+            <tr>
+                <th>品項</th>
+                <th>單價</th>
+                <th>數量</th>
+                <th>小計</th>
+            </tr>
+            <tr>
+                <td>程式設計這樣學就對了</td>
+                <td>300</td>
+                <td>
+                    <span><a href="#"  class="minus" id="minus" onclick="addItemQuantity(-1)">-</a></span>
+                    <span id="amount">0</span>
+                    <span><a href="#"  class="add" id="add" onclick="addItemQuantity(1)">+</a></span>
+                </td>
+                <td id="itemPrice">0</td>
+            </tr>
+        </table>
+        <h1>想學會的技能</h1>
+        <div class="skills">
+            <input type="checkbox" class="skill">HTML
+            <input type="checkbox" class="skill">CSS
+            <input type="checkbox" class="skill">JavaScript
+            <input type="checkbox" class="skill">Git
+            <input type="checkbox" class="skill">Python
+            <input type="checkbox" class="skill">Django
+        </div>
+        <div class="button">
+            <button class="submit" onclick="selectAll()">我全都要</button>
+        </div>
+    </div>
+    <script src="a09.js"></script>
+</body>
+</html>
